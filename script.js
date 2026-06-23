@@ -1,28 +1,39 @@
-// Fecha de inicio de la relación
-const fechaInicio = new Date("2026-01-23");
-const hoy = new Date();
+// Fecha de inicio de la relación (ajústala una sola vez)
+// Ejemplo: 2026-01-24 si fue el 24 de enero
+const fechaInicio = new Date("2026-01-24"); 
 
-// Diferencia en días
-const diferencia = Math.floor((hoy - fechaInicio) / (1000 * 60 * 60 * 24));
+function actualizarContador() {
+  const hoy = new Date();
 
-// Calcular años, meses y días
-const años = Math.floor(diferencia / 365);
-const meses = Math.floor((diferencia % 365) / 30);
-const dias = diferencia - (años * 365) - (meses * 30);
+  // Diferencia en milisegundos
+  const diferencia = hoy - fechaInicio;
 
-// Mostrar contador completo
-document.getElementById("contador").textContent =
-  "💖 Hemos estado juntos por " + años + " años, " + meses + " meses y " + dias + " días 💖";
+  // Convertir a días totales
+  const diasTotales = Math.floor(diferencia / (1000 * 60 * 60 * 24));
 
-// Aplicar clases según meses especiales
-if (meses === 6 && años === 0) document.body.classList.add("mes-6");
-if (meses === 7 && años === 0) document.body.classList.add("mes-7");
-if (meses === 8 && años === 0) document.body.classList.add("mes-8");
-if (meses === 9 && años === 0) document.body.classList.add("mes-9");
-if (meses === 10 && años === 0) document.body.classList.add("mes-10");
-if (meses === 11 && años === 0) document.body.classList.add("mes-11");
+  // Calcular años, meses y días
+  let años = hoy.getFullYear() - fechaInicio.getFullYear();
+  let meses = hoy.getMonth() - fechaInicio.getMonth();
+  let dias = hoy.getDate() - fechaInicio.getDate();
 
-// Aplicar clase dinámica para cada aniversario
-if (años >= 1) {
-  document.body.classList.add("anio-" + años);
+  if (dias < 0) {
+    meses -= 1;
+    const mesAnterior = new Date(hoy.getFullYear(), hoy.getMonth(), 0).getDate();
+    dias += mesAnterior;
+  }
+
+  if (meses < 0) {
+    años -= 1;
+    meses += 12;
+  }
+
+  // Mostrar resultado en el contador
+  document.getElementById("contador").innerHTML =
+    `💖 Hemos estado juntos por ${años} años, ${meses} meses y ${dias} días 💖`;
 }
+
+// Actualizar al cargar la página
+actualizarContador();
+
+// Opcional: actualizar cada día automáticamente
+setInterval(actualizarContador, 1000 * 60 * 60 * 24);
