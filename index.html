@@ -9,13 +9,14 @@
   <!-- Título principal -->
   <h1>🌙 Mi Universo Romántico 💖</h1>
 
-  <!-- Galería de fotos -->
-  <div class="gallery">
-    <!-- Imagen especial de la luna en PNG -->
+  <!-- Sección especial de la luna -->
+  <div class="luna-section">
     <img src="images/luna.png" alt="Luna y nosotros">
     <p id="frase-luna">✨ Eres mi universo ✨</p>
+  </div>
 
-    <!-- Fotos numeradas -->
+  <!-- Galería de fotos -->
+  <div class="gallery">
     <img src="images/1.jpeg" alt="Recuerdo 1">
     <img src="images/2.jpeg" alt="Recuerdo 2">
     <img src="images/3.jpeg" alt="Recuerdo 3">
@@ -29,14 +30,23 @@
   </div>
 
   <!-- Contador de tiempo juntos -->
-  <div id="contador"></div>
+  <div id="contador">
+    💖 Hemos estado juntos por 0 años, 5 meses y 0 días 💖
+  </div>
 
   <!-- Playlist de Spotify -->
-  <div style="margin-top:30px;">
+  <div class="spotify-section">
+    <h2>Nuestra música 🎶</h2>
     <iframe style="border-radius:12px;" 
       src="https://open.spotify.com/embed/playlist/2NGQMMl13DZJylwb4x21dE?utm_source=generator" 
       width="300" height="380" frameborder="0" 
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
       loading="lazy"></iframe>
 
-    <!-- Botón para abrir en Spotify -->
+    <p style="margin-top:10px;">
+      <a href="https://open.spotify.com/playlist/2NGQMMl13DZJylwb4x21dE" target="_blank" 
+         class="spotify-button">🎶 Abrir en Spotify</a>
+    </p>
+  </div>
+</body>
+</html>
