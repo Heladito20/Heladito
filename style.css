@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Montserrat:wght@400;600&display=swap');
 
 body {
-  background: #2f3e46; /* verde oscuro elegante */
+  background: linear-gradient(135deg, #2f3e46, #1b263b, #3a2f2f, #264653); 
   color: #f1f1f1;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -12,10 +12,11 @@ body {
 /* Título principal */
 h1 {
   margin: 30px;
-  font-size: 52px;
-  font-family: 'Architects Daughter', cursive; /* estilo arquitectónico */
+  font-size: 56px;
+  font-family: 'Architects Daughter', cursive;
   font-weight: 700;
-  transition: color 1s;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
 }
 
 /* Introductorio */
@@ -25,34 +26,37 @@ h1 {
   font-size: 18px;
   line-height: 1.6;
   color: #eaeaea;
-  font-family: 'Montserrat', sans-serif;
 }
 
-/* Collage */
+/* Collage asimétrico */
 .collage {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-auto-rows: masonry;
+  gap: 20px;
   padding: 40px;
 }
 
 .foto-texto {
-  background: #1b263b; /* azul profundo */
-  border: 1px solid #ccc;
-  padding: 15px;
+  background: rgba(27,38,59,0.8); /* azul profundo translúcido */
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 .foto-texto img {
   width: 100%;
-  height: auto; /* se acopla al tamaño natural */
-  border: 1px solid #ddd;
+  height: auto;
   border-radius: 6px;
 }
 
+/* Tamaños asimétricos */
+.foto-texto.grande { grid-column: span 2; }
+.foto-texto.mediana { grid-column: span 1; }
+.foto-texto.pequeña { grid-column: span 1; }
+
 .foto-texto p {
-  margin-top: 12px;
+  margin-top: 8px;
   font-size: 18px;
   font-weight: 600;
   color: #f1f1f1;
@@ -65,7 +69,6 @@ h1 {
   font-size: 22px;
   color: #f1f1f1;
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
 }
 
 /* Playlist */
@@ -78,12 +81,11 @@ h1 {
 }
 
 .spotify-box {
-  background: #3a2f2f; /* café elegante */
-  border: 1px solid #ccc;
+  background: rgba(58,47,47,0.9); /* café elegante translúcido */
   border-radius: 12px;
   padding: 20px;
   display: inline-block;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 /* Modal */
