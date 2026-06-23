@@ -30,15 +30,15 @@ h1 {
 
 /* Collage asimétrico */
 .collage {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  grid-auto-rows: masonry;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   padding: 40px;
 }
 
 .foto-texto {
-  background: rgba(27,38,59,0.8); /* azul profundo translúcido */
+  background: rgba(27,38,59,0.8);
   border-radius: 8px;
   padding: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
@@ -51,9 +51,9 @@ h1 {
 }
 
 /* Tamaños asimétricos */
-.foto-texto.grande { grid-column: span 2; }
-.foto-texto.mediana { grid-column: span 1; }
-.foto-texto.pequeña { grid-column: span 1; }
+.foto-texto.grande { flex: 1 1 400px; }
+.foto-texto.mediana { flex: 1 1 280px; }
+.foto-texto.pequeña { flex: 1 1 180px; }
 
 .foto-texto p {
   margin-top: 8px;
@@ -81,7 +81,7 @@ h1 {
 }
 
 .spotify-box {
-  background: rgba(58,47,47,0.9); /* café elegante translúcido */
+  background: rgba(58,47,47,0.9);
   border-radius: 12px;
   padding: 20px;
   display: inline-block;
@@ -114,7 +114,4 @@ h1 {
   top: 20px;
   right: 35px;
   color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
+  font-size: 
