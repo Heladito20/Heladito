@@ -30,6 +30,16 @@ function actualizarContador() {
   // Mostrar resultado en el contador
   document.getElementById("contador").innerHTML =
     `💖 Hemos estado juntos por ${años} años, ${meses} meses y ${dias} días 💖`;
+
+  // 🎉 Efecto especial en aniversarios
+  if (dias === 0 && meses > 0) {
+    // Cada mes cumplido
+    document.body.style.background = "linear-gradient(to bottom, #330033, #660066)";
+  }
+  if (meses === 0 && dias === 0 && años > 0) {
+    // Cada año cumplido
+    document.body.style.background = "linear-gradient(to bottom, #000033, #ff0066)";
+  }
 }
 
 // Actualizar al cargar la página
@@ -37,3 +47,4 @@ actualizarContador();
 
 // Opcional: actualizar cada día automáticamente
 setInterval(actualizarContador, 1000 * 60 * 60 * 24);
+
