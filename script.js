@@ -1,87 +1,118 @@
-// Fecha de inicio de la relación (23 de enero de 2026)
-const fechaInicio = new Date("2026-01-23"); 
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Montserrat:wght@400;600&display=swap');
 
-function actualizarContador() {
-  const hoy = new Date();
-
-  let años = hoy.getFullYear() - fechaInicio.getFullYear();
-  let meses = hoy.getMonth() - fechaInicio.getMonth();
-  let dias = hoy.getDate() - fechaInicio.getDate();
-
-  if (dias < 0) {
-    meses -= 1;
-    const mesAnterior = new Date(hoy.getFullYear(), hoy.getMonth(), 0).getDate();
-    dias += mesAnterior;
-  }
-
-  if (meses < 0) {
-    años -= 1;
-    meses += 12;
-  }
-
-  // Mostrar resultado en el contador
-  let mensaje = "";
-  if (años > 0) {
-    mensaje = `💖 Hemos estado juntos por ${años} años, ${meses} meses y ${dias} días 💖`;
-  } else {
-    mensaje = `💖 Hemos estado juntos por ${meses} meses y ${dias} días 💖`;
-  }
-
-  document.getElementById("contador").innerHTML = mensaje;
-
-  // 🎉 Efecto especial en aniversarios
-  if (dias === 0 && meses > 0 && años === 0) {
-    document.body.style.background = "linear-gradient(to bottom, #2a2a4d, #3b2a4d)";
-    lanzarCorazones();
-  }
-  if (meses === 0 && dias === 0 && años > 0) {
-    document.body.style.background = "linear-gradient(to bottom, #1a1a2e, #ff0066)";
-    lanzarCorazones();
-  }
+body {
+  background: #f9f9f9;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-// Actualizar al cargar la página
-actualizarContador();
-
-// Actualizar cada día automáticamente
-setInterval(actualizarContador, 1000 * 60 * 60 * 24);
-
-// ----------------------
-// Modal de imágenes
-// ----------------------
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("imagen-grande");
-const captionText = document.getElementById("caption");
-const cerrar = document.getElementsByClassName("cerrar")[0];
-
-document.querySelectorAll(".clickable").forEach(img => {
-  img.onclick = function() {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = ""; 
-  }
-});
-
-cerrar.onclick = function() {
-  modal.style.display = "none";
+/* Título principal */
+h1 {
+  margin: 30px;
+  font-size: 52px;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  transition: color 1s;
 }
 
-// ----------------------
-// Efecto de corazones flotando
-// ----------------------
-function lanzarCorazones() {
-  for (let i = 0; i < 20; i++) {
-    const corazon = document.createElement("div");
-    corazon.innerHTML = "💖";
-    corazon.style.position = "fixed";
-    corazon.style.left = Math.random() * window.innerWidth + "px";
-    corazon.style.top = window.innerHeight + "px";
-    corazon.style.fontSize = "24px";
-    corazon.style.animation = `flotar ${3 + Math.random() * 2}s linear forwards`;
-    document.body.appendChild(corazon);
-
-    setTimeout(() => {
-      corazon.remove();
-    }, 5000);
-  }
+/* Collage en cuadrícula */
+.collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px;
 }
+
+.foto-texto {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.foto-texto img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.foto-texto p {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Modal */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  padding-top: 60px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-contenido {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.cerrar {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Contador */
+#contador {
+  margin-top: 25px;
+  font-size: 22px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Playlist */
+.spotify-section {
+  margin-top: 40px;
+}
+
+.spotify-section h2 {
+  font-size: 30px;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.spotify-box {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
