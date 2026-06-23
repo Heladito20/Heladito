@@ -2,7 +2,7 @@
 body {
   background: linear-gradient(to bottom, #0b0033, #1a0033);
   color: #fff;
-  font-family: 'Segoe Script', cursive; /* tipografía romántica */
+  font-family: 'Segoe Script', cursive;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -12,39 +12,66 @@ body {
 h1 {
   margin: 20px;
   color: #ff99cc;
-  text-shadow: 0 0 15px #ff66b2;
-  font-size: 36px;
+  text-shadow: 0 0 12px #ff66b2;
+  font-size: 32px;
 }
 
-/* Galería en cuadrícula elegante */
+/* Galería en cuadrícula */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
   justify-items: center;
 }
 
 .gallery img {
   width: 100%;
-  max-width: 280px;
-  border-radius: 20px;
-  box-shadow: 0 0 25px #ff99cc;
+  max-width: 200px; /* más pequeño */
+  border-radius: 15px;
+  box-shadow: 0 0 15px #ff99cc;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .gallery img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 40px #ff66b2;
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #ff66b2;
 }
 
 /* Imagen especial de la luna */
 .gallery img:first-child {
-  width: 300px;
-  border: 3px solid #ff99cc;
-  box-shadow: 0 0 60px #ff66b2;
+  width: 220px;
+  border: 2px solid #ff99cc;
+  box-shadow: 0 0 40px #ff66b2;
   animation: glow 3s infinite alternate;
 }
 
 @keyframes glow {
+  from { box-shadow: 0 0 30px #ff66b2; }
+  to { box-shadow: 0 0 50px #ff3399; }
+}
+
+/* Texto debajo de la luna */
+#frase-luna {
+  grid-column: span 2;
+  font-size: 20px;
+  color: #ffccff;
+  text-shadow: 0 0 12px #ff66b2;
+  margin: 8px 0;
+}
+
+/* Contador de días juntos */
+#contador {
+  margin-top: 20px;
+  font-size: 22px;
+  color: #ffccff;
+  text-shadow: 0 0 12px #ff66b2;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); color: #ffccff; }
+  50% { transform: scale(1.03); color: #ff99cc; }
+  100% { transform: scale(1); color: #ffccff; }
+}
 
