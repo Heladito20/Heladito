@@ -1,0 +1,95 @@
+/* Fondo general */
+body {
+  background: linear-gradient(to bottom, #0b0033, #1a0033);
+  color: #fff;
+  font-family: 'Segoe Script', cursive;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Título principal */
+h1 {
+  margin: 20px;
+  color: #ff99cc;
+  text-shadow: 0 0 15px #ff66b2;
+  font-size: 36px;
+}
+
+/* Galería */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #ff99cc;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #ff66b2;
+}
+
+/* Luna PNG con halo */
+.gallery img:first-child {
+  width: 280px;
+  border: none;
+  box-shadow: 0 0 40px 20px rgba(255, 153, 204, 0.6);
+  animation: halo 3s infinite alternate;
+}
+
+@keyframes halo {
+  from { box-shadow: 0 0 40px 15px rgba(255, 102, 178, 0.6); }
+  to { box-shadow: 0 0 60px 25px rgba(255, 51, 153, 0.8); }
+}
+
+/* Contador */
+#contador {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #ffccff;
+  text-shadow: 0 0 15px #ff66b2;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); color: #ffccff; }
+  50% { transform: scale(1.05); color: #ff99cc; }
+  100% { transform: scale(1); color: #ffccff; }
+}
+
+/* Texto debajo de la luna */
+#frase-luna {
+  margin-top: 15px;
+  font-size: 22px;
+  color: #ffe6f2;
+  text-shadow: 0 0 20px #ff66b2;
+  animation: fade 4s infinite alternate;
+}
+
+@keyframes fade {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+/* Meses especiales */
+body.mes-6 { background: linear-gradient(to bottom, #330033, #660066); }
+body.mes-7 { background: linear-gradient(to bottom, #4b004b, #990099); }
+body.mes-8 { background: linear-gradient(to bottom, #660033, #cc0066); }
+body.mes-9 { background: linear-gradient(to bottom, #003366, #006699); }
+body.mes-10 { background: linear-gradient(to bottom, #003300, #009933); }
+body.mes-11 { background: linear-gradient(to bottom, #663300, #cc6600); }
+
+/* Aniversarios dinámicos */
+body.anio-1 { background: linear-gradient(to bottom, #003333, #00cccc); }
+body.anio-2 { background: linear-gradient(to bottom, #330000, #ff0000); }
+body.anio-3 { background: linear-gradient(to bottom, #333300, #ffff00); }
+body.anio-4 { background: linear-gradient(to bottom, #003300, #00ff00); }
+body.anio-5 { background: linear-gradient(to bottom, #000033, #0000ff); }
+/* Puedes seguir agregando más estilos para cada año */
