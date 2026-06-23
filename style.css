@@ -19,16 +19,16 @@ h1 {
 /* Sección de la luna */
 .luna-section img {
   width: 220px;
-  border: 2px solid #ff99cc;
-  border-radius: 50%;
-  box-shadow: 0 0 40px #ff66b2;
-  animation: glow 3s infinite alternate;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px 10px 30px 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
   cursor: pointer;
+  transition: transform 0.3s;
 }
 
-@keyframes glow {
-  from { box-shadow: 0 0 30px #ff66b2; }
-  to { box-shadow: 0 0 50px #ff3399; }
+.luna-section img:hover {
+  transform: rotate(-3deg) scale(1.05);
 }
 
 #frase-luna {
@@ -38,34 +38,55 @@ h1 {
   margin: 10px 0;
 }
 
-/* Galería tipo collage */
+/* Collage Polaroid disperso */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
   padding: 20px;
 }
 
 .gallery img {
-  width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 0 15px #ff99cc;
+  width: 160px;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px 10px 30px 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s;
 }
 
 .gallery img:hover {
-  transform: rotate(-2deg) scale(1.05);
-  box-shadow: 0 0 25px #ff66b2;
+  transform: scale(1.1) rotate(0deg);
+  z-index: 10;
 }
 
-/* Variación de tamaños para efecto collage */
-.gallery img:nth-child(3n) {
-  grid-column: span 2;
-}
-.gallery img:nth-child(5n) {
-  grid-row: span 2;
-}
+/* Inclinaciones distintas */
+.gallery img:nth-child(1) { transform: rotate(-5deg); }
+.gallery img:nth-child(2) { transform: rotate(3deg); }
+.gallery img:nth-child(3) { transform: rotate(-8deg); }
+.gallery img:nth-child(4) { transform: rotate(6deg); }
+.gallery img:nth-child(5) { transform: rotate(-4deg); }
+.gallery img:nth-child(6) { transform: rotate(7deg); }
+.gallery img:nth-child(7) { transform: rotate(-6deg); }
+.gallery img:nth-child(8) { transform: rotate(5deg); }
+.gallery img:nth-child(9) { transform: rotate(-3deg); }
+.gallery img:nth-child(10) { transform: rotate(4deg); }
+.gallery img:nth-child(11) { transform: rotate(-7deg); }
+.gallery img:nth-child(12) { transform: rotate(2deg); }
+.gallery img:nth-child(13) { transform: rotate(-5deg); }
+.gallery img:nth-child(14) { transform: rotate(6deg); }
+.gallery img:nth-child(15) { transform: rotate(-4deg); }
+.gallery img:nth-child(16) { transform: rotate(3deg); }
+.gallery img:nth-child(17) { transform: rotate(-6deg); }
+.gallery img:nth-child(18) { transform: rotate(5deg); }
+.gallery img:nth-child(19) { transform: rotate(-2deg); }
+.gallery img:nth-child(20) { transform: rotate(4deg); }
+.gallery img:nth-child(21) { transform: rotate(-5deg); }
+.gallery img:nth-child(22) { transform: rotate(6deg); }
+.gallery img:nth-child(23) { transform: rotate(-3deg); }
+.gallery img:nth-child(24) { transform: rotate(2deg); }
 
 /* Modal */
 .modal {
@@ -86,7 +107,10 @@ h1 {
   display: block;
   max-width: 90%;
   max-height: 80%;
-  border-radius: 15px;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px 10px 30px 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
   animation: fadeIn 0.5s;
 }
 
@@ -118,28 +142,4 @@ h1 {
   font-size: 22px;
   color: #ffccff;
   text-shadow: 0 0 12px #ff66b2;
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); color: #ffccff; }
-  50% { transform: scale(1.03); color: #ff99cc; }
-  100% { transform: scale(1); color: #ffccff; }
-}
-
-/* Playlist */
-.spotify-section h2 {
-  margin-top: 30px;
-  font-size: 24px;
-  color: #ff99cc;
-  text-shadow: 0 0 12px #ff66b2;
-}
-
-.spotify-button {
-  background:#ff66b2;
-  color:white;
-  padding:10px 20px;
-  border-radius:25px;
-  text-decoration:none;
-  font-family:'Segoe Script', cursive;
-}
+  animation:
