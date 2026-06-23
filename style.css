@@ -13,13 +13,34 @@ h1 {
   margin: 20px;
   color: #ff99cc;
   text-shadow: 0 0 12px #ff66b2;
-  font-size: 32px;
+  font-size: 34px;
+}
+
+/* Sección de la luna */
+.luna-section img {
+  width: 220px;
+  border: 2px solid #ff99cc;
+  border-radius: 50%;
+  box-shadow: 0 0 40px #ff66b2;
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 30px #ff66b2; }
+  to { box-shadow: 0 0 50px #ff3399; }
+}
+
+#frase-luna {
+  font-size: 22px;
+  color: #ffccff;
+  text-shadow: 0 0 12px #ff66b2;
+  margin: 10px 0;
 }
 
 /* Galería en cuadrícula */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 15px;
   padding: 20px;
   justify-items: center;
@@ -27,7 +48,7 @@ h1 {
 
 .gallery img {
   width: 100%;
-  max-width: 200px; /* más pequeño */
+  max-width: 180px;
   border-radius: 15px;
   box-shadow: 0 0 15px #ff99cc;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -38,31 +59,9 @@ h1 {
   box-shadow: 0 0 25px #ff66b2;
 }
 
-/* Imagen especial de la luna */
-.gallery img:first-child {
-  width: 220px;
-  border: 2px solid #ff99cc;
-  box-shadow: 0 0 40px #ff66b2;
-  animation: glow 3s infinite alternate;
-}
-
-@keyframes glow {
-  from { box-shadow: 0 0 30px #ff66b2; }
-  to { box-shadow: 0 0 50px #ff3399; }
-}
-
-/* Texto debajo de la luna */
-#frase-luna {
-  grid-column: span 2;
-  font-size: 20px;
-  color: #ffccff;
-  text-shadow: 0 0 12px #ff66b2;
-  margin: 8px 0;
-}
-
-/* Contador de días juntos */
+/* Contador */
 #contador {
-  margin-top: 20px;
+  margin-top: 25px;
   font-size: 22px;
   color: #ffccff;
   text-shadow: 0 0 12px #ff66b2;
@@ -74,4 +73,22 @@ h1 {
   50% { transform: scale(1.03); color: #ff99cc; }
   100% { transform: scale(1); color: #ffccff; }
 }
+
+/* Playlist */
+.spotify-section h2 {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #ff99cc;
+  text-shadow: 0 0 12px #ff66b2;
+}
+
+.spotify-button {
+  background:#ff66b2;
+  color:white;
+  padding:10px 20px;
+  border-radius:25px;
+  text-decoration:none;
+  font-family:'Segoe Script', cursive;
+}
+
 
