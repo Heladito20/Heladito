@@ -7,7 +7,6 @@ body {
   text-align: center;
 }
 
-/* Título principal */
 h1 {
   margin: 30px;
   font-size: 56px;
@@ -17,7 +16,6 @@ h1 {
   text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
 }
 
-/* Introductorio */
 .intro {
   max-width: 800px;
   margin: 0 auto 40px auto;
@@ -26,7 +24,6 @@ h1 {
   color: #eaeaea;
 }
 
-/* Álbum */
 .album {
   display: flex;
   flex-wrap: wrap;
@@ -54,7 +51,6 @@ h1 {
   color: #f1f1f1;
 }
 
-/* Contador */
 #contador {
   margin-top: 25px;
   font-size: 22px;
@@ -62,7 +58,6 @@ h1 {
   font-weight: 600;
 }
 
-/* Playlist */
 .spotify-section h2 {
   font-size: 28px;
   font-family: 'Architects Daughter', cursive;
@@ -79,7 +74,6 @@ h1 {
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
-/* Modal */
 .modal {
   display: none; 
   position: fixed; 
@@ -109,4 +103,5 @@ h1 {
   font-weight: bold;
   cursor: pointer;
 }
+
 
