@@ -28,11 +28,11 @@ function actualizarContador() {
 
   document.getElementById("contador").innerHTML = mensaje;
 
-  // Mensaje final romántico que conecta con el inicial
+  // Mensaje final romántico
   const mensajeFinal = document.getElementById("mensaje-final");
   if (mensajeFinal) {
     mensajeFinal.innerHTML = `
-      Lo nuestro no inicia el 23 de enero, lo nuestro viene de algo más grande: 
+      Pero entiende que lo nuestro no inicia el 23 de enero, lo nuestro viene de algo más grande: 
       de un destino que hizo que cada día antes de conocernos aprendiéramos nuestras lecciones por separado, 
       que nos topáramos más de una vez en algún lugar, que permitió que las personas que debían unirnos se conocieran entre sí 
       y que nuestros caminos terminaran uniéndose en el tiempo exacto.  
@@ -94,4 +94,3 @@ window.addEventListener("load", () => {
     }
   }
 });
-
