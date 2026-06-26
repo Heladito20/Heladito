@@ -32,13 +32,13 @@ function actualizarContador() {
   const mensajeFinal = document.getElementById("mensaje-final");
   if (mensajeFinal) {
     mensajeFinal.innerHTML = `
-      Pero entiende que lo nuestro no inicia el 23 de enero, lo nuestro viene de algo más grande: 
-      de un destino que hizo que cada día antes de conocernos aprendiéramos nuestras lecciones por separado, 
-      que nos topáramos más de una vez en algún lugar, que permitió que las personas que debían unirnos se conocieran entre sí 
+      Pero entiende que lo nuestro no inicia el 23 de enero, lo nuestro viene de algo más grande:  
+      de un destino que hizo que cada día antes de conocernos aprendiéramos nuestras lecciones por separado,  
+      que nos topáramos más de una vez en algún lugar, que permitió que las personas que debían unirnos se conocieran entre sí  
       y que nuestros caminos terminaran uniéndose en el tiempo exacto.  
 
-      Lo nuestro es más grande porque es el plan perfecto del destino: llegar hasta aquí, 
-      hasta que eternamente este cronómetro siga contando segundos, minutos, horas, días, meses, años… 
+      Lo nuestro es más grande porque es el plan perfecto del destino: llegar hasta aquí,  
+      hasta que eternamente este cronómetro siga contando segundos, minutos, horas, días, meses, años…  
       y espero que también vidas.  
 
       Te amo y te amaré por toda la eternidad, hasta que tú me lo permitas. 💖
