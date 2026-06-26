@@ -18,16 +18,16 @@ h1 {
 
 .intro {
   max-width: 800px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 20px auto;
   font-size: 18px;
   line-height: 1.6;
   color: #eaeaea;
 }
 
-/* Álbum en 6 columnas */
+/* Álbum en 5 columnas */
 .album {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   padding: 40px;
 }
@@ -58,7 +58,7 @@ h1 {
   font-weight: 600;
 }
 
-/* Spotify arriba */
+/* Spotify */
 .spotify-section h2 {
   font-size: 28px;
   font-family: 'Architects Daughter', cursive;
@@ -105,3 +105,4 @@ h1 {
   font-weight: bold;
   cursor: pointer;
 }
+
